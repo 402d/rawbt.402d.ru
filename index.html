@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raw BT Printer - Thermal Printer Driver for Android</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="402d">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+            integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+            crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="landing-page">
+
+
+<div class="page-wrapper">
+
+    <!-- ******Header****** -->
+    <header class="header text-center">
+        <div class="container">
+            <div class="branding">
+                <h1 class="logo">
+                    <span aria-hidden="true" class="icon_printer icon"></span>
+                    <span class="text-highlight">RawBT</span> <span class="text-bold">Printer</span>
+                </h1>
+            </div><!--//branding-->
+            <div class="tagline">
+                <p>Print service & driver for ESC/POS thermal printer for Android.</p>
+                <p>Printing receipts from HTML&JS.</p>
+            </div><!--//tagline-->
+            <div class="social-container">
+            </div><!--//social-container-->
+        </div><!--//container-->
+    </header><!--//header-->
+
+    <section class="cards-section text-center">
+        <div class="container">
+            <h3>I am working on a new version of the site and the program.<br />
+                The description is in line with the new version available to beta testers.<br />
+                Upon completion, there will be a version for everyone.</h3>
+            <div class="callout-block item item-orange">
+                <div class="item-inner  text-left">
+                    <div class="icon-holder">
+                        <span aria-hidden="true" class="icon icon_lifesaver"></span>
+                    </div><!--//icon-holder-->
+                    <div class="content">
+                        <h4 class="title">Very small letters on the printout.</h4>
+                    </div><!--//content-->
+                    <br/>
+                    <p>The page that you want to print, the program receives in graphical format (picture). If
+                        it was created for A4 paper, then the reduction occurs 4 times. Use a larger font in
+                        your document. On the print driver side, font enlargement is not possible.
+                        On this site you will find descriptions of all the ways to interact with the
+                        program to get the best result.
+                    </p>
+                </div>
+            </div><!--//callout-block-->
+
+            <h2 class="title">Printing is easy!</h2>
+            <div class="intro">
+                <p>To print the text to thermal printer connected to client's phone it is enough to place a special type
+                    of link on the site.</p>
+                <script>
+                    function checkAndroid() {
+                        var ua = navigator.userAgent.toLowerCase();
+                        var isAndroid = ua.indexOf("android") > -1;
+                        if (isAndroid) return true;
+                        alert('Required Android! Open this page on you phone.');
+                        return false;
+                    }
+                </script>
+                <div class="cta-container">
+                    <a class="btn btn-primary btn-cta" onclick="return checkAndroid();"
+                       href="intent:Hello,%20World!%13%13#Intent;scheme=rawbt;package=ru.a402d.rawbtprinter;end;"><i
+                            class="fas fa-print"></i> Print Now</a>
+                </div><!--//cta-container-->
+            </div><!--//intro-->
+
+
+            <div id="cards-wrapper" class="cards-wrapper row">
+
+
+                <div class="item item-blue col-lg-4 col-12  col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <span aria-hidden="true" class="icon icon_tablet"></span>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">App Functions</h3>
+                        <p class="intro">For end users</p>
+                        <a class="link" href="appfunctions.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item item-green col-lg-4 col-12 col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <i class="icon fa fa-paper-plane"></i>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">Quick Start</h3>
+                        <p class="intro">Examples for webmasters</p>
+                        <a class="link" href="start.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item item-pink item-2 col-lg-4 col-12 col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">Intents</h3>
+                        <p class="intro">more For android developers</p>
+                        <a class="link" href="intents.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+
+                <div class="item item-purple col-lg-4 col-12  col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <span aria-hidden="true" class="icon icon_lifesaver"></span>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">FAQs</h3>
+                        <p class="intro">about application</p>
+                        <a class="link" href="faqs.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item item-primary col-lg-4 col-12  col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <span aria-hidden="true" class="icon icon_genius"></span>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">Toolkit</h3>
+                        <p class="intro">Reference materials</p>
+                        <a class="link" href="toolkit.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item item-orange col-lg-4 col-12  col-sm-6">
+                    <div class="item-inner">
+                        <div class="icon-holder">
+                            <span aria-hidden="true" class="icon icon_gift"></span>
+                        </div><!--//icon-holder-->
+                        <h3 class="title">License</h3>
+                        <p class="intro">Freemium</p>
+                        <a class="link" href="license.html"><span></span></a>
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+            </div><!--//cards-->
+
+
+        </div><!--//container-->
+    </section><!--//cards-section-->
+
+
+</div><!--//page-wrapper-->
+
+<footer class="footer text-center">
+    <div class="container">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a
+                href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers
+        </small>
+
+    </div><!--//container-->
+</footer><!--//footer-->
+
+
+<!-- Main Javascript -->
+<script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html> 
+
