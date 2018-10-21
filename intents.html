@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RawBT: Integration with other android application</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-pink">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_printer icon"></span>
+                            <span class="text-highlight">RawBT</span> <span class="text-bold">Printer</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Intents</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> Intents</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: October 21th, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row" >
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="demo" class="doc-section">
+                                <h2 class="section-title">Test coverage & Examples</h2>
+                                <div class="section-block">
+                                    <p>I ask you to forgive me for the mistakes made in previous versions of the program. At the moment I have written a test suite. Each test in the application checks one of the methods of interaction with the program.</p>
+                                    <p>On this page I will not repeat the texts of the examples. I will describe only the interaction features.</p>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> GitHub:</strong> <a href="https://github.com/402d/DemoRawBtPrinter/blob/master/app/src/main/java/ru/a402d/demorawbt/MainActivity.java#L30" target="_blank">402d/DemoRawBtPrinter</a></p>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> Google Play:</strong> <a href="https://play.google.com/store/apps/details?id=ru.a402d.demorawbt" target="_blank">Test RawBT</a></p>
+
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="service" class="doc-section">
+                                <h2 class="section-title">Standard Print on Android</h2>
+                                <div class="section-block">
+
+                                    <p>In Android 4.4 (API level 19) and higher, the framework provides services for printing images and documents directly from Android applications.
+                                        Being able to print information from your Android application gives users a way to see a larger version of the content from your app or share it with another person who is not using your application. Printing also allows them to create a snapshot of information that does not depend on having a device, sufficient battery power, or a wireless network connection.
+                                    </p>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> Documentation:</strong> <a href="https://developer.android.com/training/printing/" target="_blank">developer.android.com/training/printing/</a></p>
+
+                                    <p>If you implement the standard method, you can print not only through my application, but to any printer.</p>
+
+                                    <div class="code-block">
+                                        <h6>Printing HTML documents:</h6>
+                                        <script type="text/plain" class="language-java">private void createWebPrintJob(WebView webView) {
+        //create object of print manager in your device
+        PrintManager printManager = (PrintManager) getActivity().getSystemService(Context.PRINT_SERVICE);
+        if (printManager != null) {
+            //create object of print adapter
+            PrintDocumentAdapter printAdapter = webView.createPrintDocumentAdapter();
+
+            //provide name to your newly generated pdf file
+            String jobName = getString(R.string.app_name) + " Document";
+
+            //open print dialog
+            printManager.print(jobName, printAdapter, new PrintAttributes.Builder().setMinMargins(new PrintAttributes.Margins(0,0,0,0)).build());
+        }else{
+            // sorry, not supported
+        }
+}
+</script>
+                                        <p>Please note that the function text is different from the example in the official documentation.</p>
+
+                                        <p>I have written a complete application to illustrate this example. The source code of the program is available on GitHub .
+
+                                            The application is available in the market and really used as an extension to RawBT (option for editor).</p>
+                                        <p><strong><i class="fas fa-external-link-square-alt"></i> GitHub:</strong> <a href="https://github.com/402d/TextToPrint/blob/master/app/src/main/java/ru/a402d/texttoprint/MainActivity.java" target="_blank">402d/TextToPrint</a></p>
+                                        <p><strong><i class="fas fa-external-link-square-alt"></i> Google Play:</strong> <a href="https://play.google.com/store/apps/details?id=ru.a402d.texttoprint" target="_blank">Text To Print</a></p>
+
+                                    </div>
+
+
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="send" class="doc-section">
+                                <h2 class="section-title">Printing from existing applications</h2>
+                                <div class="section-block">
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> GitHub:</strong> <a href="https://github.com/402d/rawbt.402d.ru/blob/master/src/AndroidManifest.xml" target="_blank">AndroidManifest.xml</a></p>
+
+                                    <p>I'll show you my function of parsing the data that came into the application.</p>
+                                    <div class="code-block">
+                                    <h6>Parse intent:</h6>
+                                    <script type="text/plain" class="language-java">static public boolean getPrintData(PosDriverInterface driver, Intent intent) {
+        String action = intent.getAction();
+        String type = intent.getType();
+        if (action == null || action.equals(Intent.ACTION_MAIN)) {
+            // nothing print
+            return false;
+        }
+
+        boolean isUTF = RawPrinterApp.isUTF();
+
+        // force
+        String mode = intent.getStringExtra("utf_mode");
+        if (null != mode && mode.equals("stream")) {
+            isUTF = false;
+        }
+        if (null != mode && mode.equals("utf")) {
+            isUTF = true;
+        }
+
+
+        if (action.equals(Intent.ACTION_VIEW)) {
+            return fileBePrinted(driver, intent.getData(),type,isUTF);
+        }
+
+        Bundle extras;
+
+        if (action.equals(Intent.ACTION_SEND)) {
+            extras = intent.getExtras();
+            if (extras == null) {
+                // NO EXTRAS
+                return false;
+            }
+            Uri uri = extras.getParcelable(Intent.EXTRA_STREAM);
+            String stringText = extras.getString(Intent.EXTRA_TEXT);
+            if (stringText == null) {
+                CharSequence textSequence = intent.getCharSequenceExtra(Intent.EXTRA_TEXT);
+                if (textSequence != null) {
+                    stringText = textSequence.toString();
+                }
+            }
+
+            if (uri != null) {
+                return  fileBePrinted(driver, uri, type,isUTF);
+            }
+            if (stringText == null || stringText.trim().length() <= 0) {
+                // nothing print
+                return false;
+            }
+            driver.text(stringText + "\n");
+            return true;
+}
+</script>
+
+                                    </div>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="utf8" class="doc-section">
+                                <h2 class="section-title">Print UTF-8 text with formatting</h2>
+                                <div class="section-block">
+
+                                    <p>The printer does not understand the UTF-8. The program converts them into one byte encoding of your language.</p>
+                                    <div class="code-block">
+                                        <h6>class EscGeneral implements PosDriverInterface</h6>
+                                        <script type="text/plain" class="language-java">public void text(String str) {
+   try {
+     byte[] bytes = str.getBytes(printerEncoding.getEncoding());
+     this.buf.add(bytes);
+   } catch (UnsupportedEncodingException e) {
+     //
+   }
+}
+</script>
+                                    </div>
+                                        <p>For most languages, there is a problem with ESC/p command contained characters from the range [128-255].</p>
+                                        <p>
+                                            If <a href="https://unicode-table.com/en/#latin-1-supplement">such characters</a> are processed separately, then the problem is with the Portuguese language(
+                                            and others languages used symbols U+00C0 - U+00FF ).
+                                        </p>
+
+                                        <div class="code-block">
+                                            <h6>How make string from ESC POS codes:</h6>
+                                            <script type="text/plain" class="language-java">String logo = new String(new byte[]{0x1C, 0x70, 0x01, 0x00});
+String LF = new String(new byte[]{0x0A});
+// where print is  test1(), test3() or test4()
+print(logo+LF+"You text");
+</script>
+
+<p>But it is better to use ready-made classes from printer manufacturers SDK for these purposes.</p>
+
+                                    </div>
+
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="transport" class="doc-section">
+                                <h2 class="section-title">Using the application as a driver to transfer data to a peripheral device</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>1. Intent.VIEW or Intent.Send files with .prn extension</li>
+                                        <li>2. Scheme RawBT,base64</li>
+                                    </ul>
+                                        <div class="code-block">
+                                            <script type="text/plain" class="language-java">// encode byte[] to base64
+String base64ToPrint = Base64.encodeToString(bytesToPrint, Base64.DEFAULT);
+
+// call intent with rawbt:base64,
+String url = "rawbt:base64,"+base64ToPrint;
+Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+</script>
+                                        </div>
+                                </div>
+                            </section><!--//doc-section-->
+
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#demo">Demo</a>
+                                <a class="nav-link scrollto" href="#service">Print service</a>
+                                <a class="nav-link scrollto" href="#send">Send & View</a>
+                                <a class="nav-link scrollto" href="#utf8">UTF-8</a>
+                                <a class="nav-link scrollto" href="#transport">Use as transport</a>
+
+                            </nav><!--//doc-menu-->
+                        </div><!--//doc-nav-->
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
