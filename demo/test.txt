@@ -1,0 +1,41 @@
+Please select you codepage in the settings.
+Wrong charset not printed.
+----------------------
+
+Danish 
+Quizdeltagerne spiste jordbær med fløde, mens cirkusklovnen Wolther spillede på xylofon.
+
+German
+Falsches Üben von Xylophonmusik quält jeden größeren Zwerg.
+
+Greek
+Ξεσκεπάζω την ψυχοφθόρα βδελυγμία
+
+Spanish
+El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío, añoraba a su querido cachorro.
+
+French
+Le cœur déçu mais l'âme plutôt naïve, Louÿs rêva de crapaüter en canoë au delà des îles, près du mälström où brûlent les novæ.
+
+Irish Gaelic
+D'fhuascail Íosa, Úrmhac na hÓighe Beannaithe, pór Éava agus Ádhaimh.
+
+Hungarian
+Árvíztűrő tükörfúrógép.
+
+Icelandic
+Kæmi ný öxi hér ykist þjófum nú bæði víl og ádrepa.
+
+Latvian
+Glāžšķūņa rūķīši dzērumā čiepj Baha koncertflīģeļu vākus.
+
+Polish
+Pchnąć w tę łódź jeża lub ośm skrzyń fig.
+
+Russian
+В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+
+Turkish
+Pijamalı hasta, yağız şoföre çabucak güvendi.
+
+
